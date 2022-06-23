@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         brand: {
           primary: "#E2CFC1",
+          darken: "#896A67",
+          secondary: "#2b7faf",
           black: "#262626",
         },
       },

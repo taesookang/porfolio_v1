@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
-
 }
 
 // motion variants
@@ -18,10 +17,7 @@ const fadeIn = {
   },
 };
 
-export const FadeInDiv: React.FC<Props> = ({
-  children,
-
-}) => {
+export const FadeInDiv: React.FC<Props> = ({ children }) => {
   return (
     <motion.div
       className="w-full flex"

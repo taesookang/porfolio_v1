@@ -54,10 +54,44 @@ h3 {
 
 .paragraph {
     color: lighten($text, 30);
-    line-height: 34px;
+    line-height: 32px;
 }
 
 b {
     color: $text;
     font-weight: 500;
+}
+
+label {
+    font-size: 12px;
+    color: lighten($text, 50);
+}
+
+input,
+textarea {
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border: 1px solid #e2e2e2;
+
+    &:focus {
+        // outline: 2px solid $primary
+        outline: none !important;
+        // border-color: $primary;
+        border-width: 2px;
+
+    }
+}
+
+input {
+    padding: 0 8px;
+    height: 32px;
+}
+
+textarea {
+    resize: none;
+    height: 140px;
+    padding: 8px;
 }

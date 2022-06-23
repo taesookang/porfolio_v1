@@ -6,10 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "framer-motion": "^6.3.11",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-icons": "^4.4.0",
     "sass": "^1.52.3"
   },
   "devDependencies": {

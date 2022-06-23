@@ -12,10 +12,10 @@ export const Main: React.FC<Props> = () => {
           <div className="w-full flex justify-end">
             <Greeting />
           </div>
-          <p className="mt-2 text-slate-400">
+          <p className="mt-2 text-brand-black/40">
             Creating websites and applications
           </p>
-          <div className="mt-14 w-full flex items-center justify-around">
+          <div className="mt-14 w-full flex items-center justify-between">
             <CTA title="Works" scrollToId="works" />
             <CTA title="Contact" scrollToId="contact" />
           </div>

@@ -1,12 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { Header, Section, CTA } from "../components";
-import { motion } from "framer-motion";
-import { useEffect } from "react";
-import { Main, About, Works } from "../sections";
+
+import { Header } from "../components";
+
+import { Main, About, Works, Contact } from "../sections";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +16,7 @@ const Home: NextPage = () => {
       <Main />
       <About />
       <Works />
+      <Contact />
     </div>
   );
 };

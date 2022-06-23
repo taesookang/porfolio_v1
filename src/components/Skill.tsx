@@ -19,6 +19,7 @@ export const Skill: React.FC<Props> = ({ title, level }) => {
                     whileInView={{
                       width: `${level}%`,
                     }}
+                    viewport={{once: true}}
                     transition={{
                       duration: 1,
                       ease: "easeInOut",
