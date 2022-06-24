@@ -9,8 +9,11 @@ const Home: NextPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Head>
-        <title>Taesoo Kang</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Taesoo's Portfolio</title>
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
       </Head>
       <Header />
       <Main />
