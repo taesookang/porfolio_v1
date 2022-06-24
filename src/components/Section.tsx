@@ -8,7 +8,7 @@ interface Props {
 export const Section: React.FC<Props> = ({ id, children }) => {
   return (
     <section id={id} className="w-full flex items-center justify-center">
-      <div className="container flex w-full py-24 px-20">{children}</div>
+      <div className="container flex flex-col-reverse md:flex-row w-full py-24 px-8 lg:px-24">{children}</div>
     </section>
   );
 };

@@ -12,7 +12,7 @@ export const Skill: React.FC<Props> = ({ title, level }) => {
                 <h3 className='capitalize mb-2'>{title}</h3>
                 <div className="relative w-full h-1 bg-slate-200 rounded-full">
                   <motion.div
-                    className="absolute rounded-l top-0 left-0 bg-brand-black h-1"
+                    className="absolute rounded-l top-0 left-0 bg-brand-secondary h-1"
                     initial={{
                       width: 0,
                     }}

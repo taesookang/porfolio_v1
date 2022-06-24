@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
-import { MenuButtons } from '.'
+import { MenuButtons } from ".";
+import { useGlobalContext, useOnClickOutside } from "../context";
 
 interface Props {}
 
 // motion variants
 const _upperBar = {
-  open: { rotate: "45deg", y: -3.3 },
-  close: { rotate: 0, y: 0 },
+  open: { rotate: "45deg", y: -3.3, x: 4 },
+  close: { rotate: 0, y: 0, x: 0 },
 };
 
 const _lowerBar = {
-  open: { rotate: "-45deg", y: 3.3 },
-  close: { rotate: 0, y: 0 },
+  open: { rotate: "-45deg", y: 3.3, x: 4 },
+  close: { rotate: 0, y: 0, x: 0 },
 };
 
 export const Header: React.FC<Props> = () => {
@@ -20,6 +21,12 @@ export const Header: React.FC<Props> = () => {
 
   const upperBar = useAnimation();
   const lowerBar = useAnimation();
+
+  const { scrollToSection } = useGlobalContext();
+
+  const ref = useRef(null);
+
+  useOnClickOutside(ref, () => setIsOpen(false));
 
   useEffect(() => {
     if (isOpen) {
@@ -33,13 +40,16 @@ export const Header: React.FC<Props> = () => {
 
   return (
     <div className="fixed w-full h-24 py-2 px-8 flex items-center justify-between z-50">
-      <div className="flex flex-col items-end">
+      <button
+        onClick={() => scrollToSection("main")}
+        className="flex flex-col items-end invisible lg:visible"
+      >
         <span className="font-bold text-xl text-right">Taesoo.</span>
         <span className="font-light -mt-2 text-right">Kang</span>
-      </div>
-      <div className="relative">
+      </button>
+      <div className="relative" ref={ref}>
         <button
-          className="w-8 h-8 flex flex-col items-center justify-center"
+          className="w-12 h-12 bg-white lg:bg-transparent shadow-md md:shadow-none rounded-full flex flex-col items-center justify-center"
           onClick={() => setIsOpen(!isOpen)}
         >
           <motion.div
@@ -56,9 +66,7 @@ export const Header: React.FC<Props> = () => {
           />
         </button>
         <AnimatePresence>
-          {isOpen && (
-            <MenuButtons />
-          )}
+          {isOpen && <MenuButtons setIsOpen={setIsOpen} />}
         </AnimatePresence>
       </div>
     </div>
