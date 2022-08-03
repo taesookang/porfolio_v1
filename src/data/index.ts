@@ -11,7 +11,7 @@ const projects: IProject[] = [
     title: "Wordle",
     platform: "web",
     thumbnail: "/images/wordle.png",
-    desc: "A word guessing game web app, supporting dark mode appearance",
+    desc: "A word guessing game web app, supporting dark mode appearance.",
     repo: "https://github.com/taesookang/wordle",
   },
   {
@@ -25,7 +25,7 @@ const projects: IProject[] = [
     title: "instagrid",
     platform: "web",
     thumbnail: "/images/instagrid.png",
-    desc: "Instagram cloned web app includes key features such as post, follow, like and comment",
+    desc: "Instagram cloned web app includes key features such as post, follow, like and comment.",
     repo: "https://github.com/taesookang/instagrid",
   },
   {
