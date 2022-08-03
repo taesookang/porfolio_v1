@@ -1,22 +1,8 @@
 import React from "react";
 import { Section, Skill, SectionLayout } from "../components";
+import { skills } from '../data'
 
 export const About: React.FC = () => {
-  const skills = [
-    { title: "Typescript", level: 95 },
-    { title: "Next JS ", level: 95 },
-    { title: "React JS", level: 95 },
-    { title: "React Native", level: 70 },
-    { title: "Tailwind CSS", level: 95 },
-    { title: "SASS / SCSS", level: 80 },
-    { title: "Firebase", level: 90 },
-    { title: "GraphCMS", level: 80 },
-    { title: "GraphQL", level: 80 },
-    { title: "Node JS", level: 60 },
-    { title: "Mongo DB", level: 60 },
-    { title: "Jest / Testing library", level: 70 },
-    { title: "Docker", level: 50 },
-  ];
 
   return (
     <Section id={"about"}>
