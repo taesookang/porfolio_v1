@@ -8,6 +8,13 @@ interface IProject {
 
 const projects: IProject[] = [
   {
+    title: "Dockyard",
+    platform: "web",
+    thumbnail: "/images/dockyard.png",
+    desc: "A single-page e-commerce website with an animated user interface, along with the integration of AWS S3 and CloudFront for the efficient retrieval of assets and data.",
+    repo: "https://github.com/taesookang/dockyard",
+  },
+  {
     title: "Wordle",
     platform: "web",
     thumbnail: "/images/wordle.png",
@@ -51,19 +58,48 @@ const projects: IProject[] = [
   },
 ];
 
-const skills = [
-  { title: "Typescript", level: 95 },
-  { title: "Next JS ", level: 95 },
-  { title: "React JS", level: 95 },
-  { title: "React Native", level: 70 },
-  { title: "Tailwind CSS", level: 95 },
-  { title: "SASS / SCSS", level: 80 },
-  { title: "Firebase", level: 90 },
-  { title: "GraphCMS", level: 80 },
-  { title: "GraphQL", level: 80 },
-  { title: "Node JS", level: 60 },
-  { title: "Mongo DB", level: 60 },
-  { title: "Jest / Testing library", level: 70 },
-  { title: "Docker", level: 50 },
+interface Skill {
+  title: string;
+  level: number;
+}
+
+const skills: [string, Skill[]][] = [
+  [
+    "languages",
+    [
+      { title: "Typescript", level: 95 },
+      { title: "Javascript", level: 90 },
+      { title: "Python", level: 80 },
+    ],
+  ],
+  [
+    "libraries",
+    [
+      { title: "React JS", level: 95 },
+      { title: "Next JS ", level: 90 },
+      { title: "React Native", level: 70 },
+      { title: "Tailwind CSS", level: 95 },
+      { title: "SASS / SCSS", level: 80 },
+      { title: "GraphQL", level: 80 },
+      { title: "Node JS", level: 80 },
+      { title: "Jest / Testing library", level: 80 },
+      { title: "Docker", level: 50 },
+    ],
+  ],
+  [
+    "Database",
+    [
+      { title: "Firebase", level: 90 },
+      { title: "Postgres SQL", level: 80 },
+      { title: "Mongo DB", level: 80 },
+    ],
+  ],
+  [
+    "cloud services",
+    [
+      { title: "AWS", level: 80 },
+      { title: "Google Cloud", level: 70 },
+    ],
+  ],
 ];
 export { skills, projects };

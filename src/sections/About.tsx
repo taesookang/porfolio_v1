@@ -1,40 +1,62 @@
 import React from "react";
 import { Section, Skill, SectionLayout } from "../components";
-import { skills } from '../data'
+import { skills } from "../data";
 
 export const About: React.FC = () => {
-
   return (
     <Section id={"about"}>
       <div className="flex flex-col w-full">
         <SectionLayout title="About">
           <p className="paragraph">
-            Hello, my name is Taesoo and I am a self-taught coder who is
-            proficient in <b>React JS</b> and currently looking for a chance to
-            start my career as a <b>front-end developer</b>. <br />
-            Even though I studied CIS when I was in college, I learned most of
-            my web development concepts by myself, since my college's web
-            development courses mainly covered HTML, CSS, and JS basics, rather
-            than diving deep into modern frameworks.
+            As a highly motivated and passionate <b>web developer</b>, I am
+            eager to bring my expertise in coding and web development to a
+            dynamic and innovative organization. With a strong background in web
+            technologies, a deep understanding of the latest industry trends and
+            a commitment to staying current with new advancements, I am
+            confident that I have the skills, experience and drive to make a
+            meaningful contribution to your team.
             <br />
-            Also, my interest in UX/UI design led me to learn web design tools
-            such as Sketch and Figma, which enhanced my development skills
-            greatly. As I practiced and built my own projects, I became aware of
-            the importance of efficiency in coding and how fascinating it is to
-            simplify complicated problems. Therefore, my primary interests in
-            these days are data structure/algorithm and clean coding.
+            As a self-taught coder, I honed my skills through hands-on
+            experience and a constant drive to improve. I am proficient in
+            various web technologies including <b>React JS</b> and have a keen
+            eye for <b>UX/UI design</b>. <br />
+            My primary interest these days lies in <b>
+              cloud services
+            </b> and <b>artificial Intelligence</b>. I am eager to bring my
+            skills and expertise to an organization that is looking for
+            forward-thinking solutions and a commitment to excellence.
+            <br />I am excited about the opportunity to put my skills to the
+            test and join a company where I can make a real impact. With my
+            dedication, creativity, and commitment to excellence, I am confident
+            that I will be a valuable asset to your team.
           </p>
         </SectionLayout>
         <div className="my-24" />
         <SectionLayout title="skills">
-          <div className="w-full flex flex-col items-center justify-center">
-            {skills.map((skill) => (
-              <Skill
-                title={skill.title}
-                level={skill.level}
-                key={skill.title}
-              />
-            ))}
+          <div className="w-full flex flex-col">
+            {skills.map((skillSet) => {
+              const category = skillSet[0];
+              const list = skillSet[1];
+              return (
+                <div
+                  className="w-full flex flex-col items-center justify-center my-8"
+                  key={category}
+                >
+                  <h3 className="capitalize w-full text-lg font-semibold mb-6">
+                    {category}
+                  </h3>
+                  <div className="w-[90%] flex flex-col items-end justify-center">
+                    {list.map((skill) => (
+                      <Skill
+                        title={skill.title}
+                        level={skill.level}
+                        key={skill.title}
+                      />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </SectionLayout>
       </div>

@@ -28,8 +28,6 @@ export const Main: React.FC = () => {
             priority
             src="/images/drawing.svg"
             layout="fill"
-            // width={600}
-            // height={600}
           />
         </div>
       </div>
