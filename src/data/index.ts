@@ -8,6 +8,13 @@ interface IProject {
 
 const projects: IProject[] = [
   {
+    title: "MyGPT",
+    platform: "web",
+    thumbnail: "/images/mygpt.png",
+    desc: "An AI chatbot app that utilizes the latest advancements in natural language processing technology to deliver intelligent and personalized responses.",
+    repo: "https://github.com/taesookang/my_gpt",
+  },
+  {
     title: "Dockyard",
     platform: "web",
     thumbnail: "/images/dockyard.png",
